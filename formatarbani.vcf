@@ -1,12 +1,12 @@
 BEGIN:VCARD
 VERSION:3.0
 FN:Arbani
-N:Satrya;ARBANI;;
+N:Satrya;Arbani;;;
 ORG:PT. BAIRAHA RAJA ENERGI
-TITLE:Direktur
-TEL;TYPE=CELL,VOICE:+62 812-6726-7777
-EMAIL;TYPE=bairaharajaenergi@gmail.com
-EMAIL;TYPE=HOME:ar8ani@gmail.com
-ADR;TYPE=WORK:;;ASCOM SABANG Jl. H AGUS SALIM NO. 57, Desa/Kelurahan Kebon Sirih, Kec. Menteng, Kota Adm. Jakarta Pusat, Provinsi DKI Jakarta, Kode Pos: 10340
-ADR;TYPE=WORK:;;Jl. Tiung No. 6 Kel. Sukarame, Kec. Tenggarong, Kab. Kutai Kartanegara Kode Pos 75515
+TITLE:Direktur Utama
+TEL;TYPE=CELL,VOICE:+6281267267777
+EMAIL;TYPE=INTERNET,WORK:bairaharajaenergi@gmail.com
+EMAIL;TYPE=INTERNET,HOME:ar8ani@gmail.com
+ADR;TYPE=WORK:;;ASCOM SABANG Jl. H AGUS SALIM NO. 57, Desa/Kelurahan Kebon Sirih, Kec. Menteng;Jakarta Pusat;DKI Jakarta;10340;Indonesia
+ADR;TYPE=WORK:;;Jl. Tiung No. 6 Kel. Sukarame;Tenggarong;Kutai Kartanegara;75515;Indonesia
 END:VCARD
