@@ -36,48 +36,51 @@
             padding-bottom: 25px;
         }
 
-        /* Header Gradient Background */
+        /* Header Gradient Background Dynamic Height */
         .header {
             background: linear-gradient(135deg, #0b4b8c 0%, #b31217 100%);
-            height: 140px;
-            position: relative;
+            padding-top: 25px;
+            padding-bottom: 50px;
             display: flex;
             justify-content: center;
+            align-items: center;
+            position: relative;
         }
 
-        /* Container Logo & Foto Profile Overlay */
+        /* Container Logo & Foto Profile Flow Otomatis */
         .avatar-group {
-            position: absolute;
-            top: 25px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            gap: 15px; /* Jarak otomatis yang lega antara logo dan foto */
+            margin-bottom: -90px; /* Menarik foto agar menggantung cantik di batas header */
+            z-index: 2;
         }
 
         .logo-box {
             background: #ffffff;
             border-radius: 12px;
-            padding: 8px 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-            margin-bottom: -15px;
-            z-index: 2;
+            padding: 8px 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .logo-box img {
-            max-height: 40px;
+            max-height: 38px;
             width: auto;
             display: block;
         }
 
         .profile-box {
-            width: 100px;
-            height: 100px;
+            width: 105px;
+            height: 105px;
             border-radius: 50%;
             border: 4px solid #ffffff;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.18);
             background: #fff;
-            z-index: 1;
         }
 
         .profile-box img {
@@ -89,7 +92,7 @@
         /* Profile Details */
         .profile-info {
             text-align: center;
-            margin-top: 75px;
+            margin-top: 50px; /* Jarak pas setelah foto profil yang menggantung */
             padding: 0 20px;
         }
 
