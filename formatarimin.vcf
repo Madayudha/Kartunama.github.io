@@ -1,11 +1,12 @@
 BEGIN:VCARD
 VERSION:3.0
-FN:Arbani
+FN:Arimin
+N:Arimin;Muhammad;;;
 ORG:PT. BAIRAHA RAJA ENERGI
 TITLE:DIREKTUR
-TEL;TYPE=CELL,VOICE:+6281267267777
+TEL;TYPE=CELL,VOICE:+6281292961177
 EMAIL;TYPE=INTERNET,WORK:bairaharajaenergi@gmail.com
-EMAIL;TYPE=INTERNET,HOME:ar8ani@gmail.com
+EMAIL;TYPE=INTERNET,HOME:abairaharajaenergi@gmail.com
 ADR;TYPE=WORK:;;ASCOM SABANG Jl. H AGUS SALIM NO. 57, Desa/Kelurahan Kebon Sirih, Kec. Menteng;Jakarta Pusat;DKI Jakarta;10340;Indonesia
 ADR;TYPE=WORK:;;Jl. Tiung No. 6 Kel. Sukarame;Tenggarong;Kutai Kartanegara;75515;Indonesia
 END:VCARD
