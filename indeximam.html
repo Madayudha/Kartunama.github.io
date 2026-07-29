@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arbani - PT BAIRAHA RAJA ENERGI</title>
+    <!-- FontAwesome & Font Google -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .card-container {
+            width: 100%;
+            max-width: 420px;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            overflow: hidden;
+            margin: 15px;
+            padding-bottom: 25px;
+        }
+
+        /* Header Gradient Background Dynamic Height */
+        .header {
+            background: linear-gradient(135deg, #0b4b8c 0%, #b31217 100%);
+            padding-top: 25px;
+            padding-bottom: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Container Logo & Foto Profile Flow Otomatis */
+        .avatar-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px; /* Jarak otomatis yang lega antara logo dan foto */
+            margin-bottom: -90px; /* Menarik foto agar menggantung cantik di batas header */
+            z-index: 2;
+        }
+
+        .logo-box {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 10px 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-box img {
+            max-height: 58px;
+            width: auto;
+            display: block;
+        }
+
+        .profile-box {
+            width: 105px;
+            height: 105px;
+            border-radius: 50%;
+            border: 4px solid #ffffff;
+            overflow: hidden;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+            background: #fff;
+        }
+
+        .profile-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Profile Details */
+        .profile-info {
+            text-align: center;
+            margin-top: 50px; /* Jarak pas setelah foto profil yang menggantung */
+            padding: 0 20px;
+        }
+
+        .profile-info h1 {
+            font-size: 22px;
+            font-weight: 800;
+            color: #111;
+        }
+
+        .profile-info p {
+            font-size: 13px;
+            color: #1a5695;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        /* Quick Action Buttons */
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 20px;
+        }
+
+        .btn-action {
+            width: 50px;
+            height: 45px;
+            border-radius: 12px;
+            border: 1px solid #e1e8f0;
+            background: #f8fafc;
+            color: #0b4b8c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-action:hover {
+            background: #0b4b8c;
+            color: #fff;
+        }
+
+        /* Section Block */
+        .section-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin: 20px 20px 10px 20px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-vcard {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: #1d4ed8;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 14px;
+            margin: 0 20px 12px 20px;
+            box-shadow: 0 4px 12px rgba(29, 78, 216, 0.25);
+            transition: background 0.2s;
+        }
+
+        .btn-vcard:hover {
+            background: #1e40af;
+        }
+
+        /* Info Item Card */
+        .info-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 12px 16px;
+            margin: 0 20px 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .info-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #334155;
+            text-decoration: none;
+        }
+
+        .info-left i {
+            color: #1d4ed8;
+            font-size: 15px;
+            width: 16px;
+        }
+
+        .badge {
+            font-size: 10px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 6px;
+            text-transform: uppercase;
+        }
+
+        .badge-kantor { background: #e0f2fe; color: #0369a1; }
+        .badge-pribadi { background: #f1f5f9; color: #475569; }
+        .badge-pusat { background: #dc2626; color: #ffffff; }
+        .badge-cabang { background: #2563eb; color: #ffffff; }
+
+        /* Maps Wrapper */
+        .map-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 15px;
+            margin: 0 20px 15px 20px;
+        }
+
+        .map-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .map-header h3 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .map-address {
+            font-size: 11px;
+            color: #64748b;
+            line-height: 1.4;
+            margin-bottom: 12px;
+        }
+
+        .map-frame {
+            width: 100%;
+            height: 160px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #cbd5e1;
+        }
+
+        .map-frame iframe {
+            width: 100% !important;
+            height: 100% !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        <!-- Header Gradient -->
+        <div class="header">
+            <div class="avatar-group">
+                <!-- Logo Perusahaan di folder assets/ -->
+                <div class="logo-box">
+                    <img src="assets/LOGOPT.png" alt="PT BAIRAHA RAJA ENERGI" onerror="this.src='assets/LOGOPT.jpg'">
+                </div>
+                <!-- Foto Profile Arbani di folder assets/ -->
+                <div class="profile-box">
+                    <img src="assets/Picture1.jpg" alt="Arbani">
+                </div>
+            </div>
+        </div>
+
+        <!-- Nama & Jabatan -->
+        <div class="profile-info">
+            <h1>Arbani</h1>
+            <p>Direktur Utama • PT BAIRAHA RAJA ENERGI</p>
+        </div>
+
+        <!-- Tombol Aksi Cepat -->
+        <div class="action-buttons">
+            <a href="tel:+6281267267777" class="btn-action"><i class="fa-solid fa-phone"></i></a>
+            <a href="https://wa.me/6281267267777" class="btn-action" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="mailto:bairaharajaenergi@gmail.com" class="btn-action"><i class="fa-solid fa-envelope"></i></a>
+            <a href="#lokasi" class="btn-action"><i class="fa-solid fa-location-dot"></i></a>
+        </div>
+
+        <!-- Kontak Resmi Section -->
+        <div class="section-title"><i class="fa-solid fa-address-card"></i> KONTAK RESMI</div>
+        
+        <!-- File vCard Arbani -->
+        <a href="formatarbani.vcf" class="btn-vcard" download>
+    <i class="fa-solid fa-address-book"></i> Simpan Kontak vCard
+</a>
+
+        <div class="info-card">
+            <a href="tel:+6281267267777" class="info-left">
+                <i class="fa-solid fa-phone"></i> +62 812-6726-7777
+            </a>
+        </div>
+
+        <div class="info-card">
+            <a href="mailto:bairaharajaenergi@gmail.com" class="info-left">
+                <i class="fa-solid fa-building"></i> bairaharajaenergi@gmail.com
+            </a>
+            <span class="badge badge-kantor">KANTOR</span>
+        </div>
+
+        <div class="info-card">
+            <a href="mailto:ar8ani@gmail.com" class="info-left">
+                <i class="fa-solid fa-envelope"></i> ar8ani@gmail.com
+            </a>
+            <span class="badge badge-pribadi">PRIBADI</span>
+        </div>
+
+        <!-- Perusahaan Section -->
+        <div class="section-title"><i class="fa-solid fa-city"></i> PERUSAHAAN</div>
+        <div class="info-card">
+            <div class="info-left">
+                <i class="fa-solid fa-circle-check" style="color: #16a34a;"></i> PT. BAIRAHA RAJA ENERGI
+            </div>
+        </div>
+
+        <!-- Lokasi Kantor Section -->
+        <div id="lokasi" class="section-title"><i class="fa-solid fa-map-location-dot"></i> LOKASI KANTOR</div>
+
+        <!-- Kantor Pusat Map -->
+        <div class="map-card">
+            <div class="map-header">
+                <h3>Kantor Pusat</h3>
+                <span class="badge badge-pusat">PUSAT</span>
+            </div>
+            <p class="map-address">ASCOM SABANG Jl. H AGUS SALIM NO. 57, Desa/Kelurahan Kebon Sirih, Kec. Menteng, Kota Adm. Jakarta Pusat, Provinsi DKI Jakarta, Kode Pos: 10340</p>
+            <div class="map-frame">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.585786268939!2d106.82275267414764!3d-6.186148293801389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f56db5847c89%3A0x865163b1e5e2fc4b!2sAsCom%20-%20Sabang%20(Jakarta%20Pusat)!5e0!3m2!1sid!2sid!4v1785181875493!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+        </div>
+
+        <!-- Kantor Operasional Map -->
+        <div class="map-card">
+            <div class="map-header">
+                <h3>Kantor Operasional / Cabang</h3>
+                <span class="badge badge-cabang">CABANG</span>
+            </div>
+            <p class="map-address">Jl. Tiung No. 6 Kel. Sukarame, Kec. Tenggarong, Kab. Kutai Kartanegara Kode Pos 75515</p>
+            <div class="map-frame">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15958.875752143029!2d116.97077223368638!3d-0.4044049934659596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df665c8539ce4cf%3A0x89a1212beabd4911!2sPT.%20BAUNTUNG%20BATUAH%20MAKMUR!5e0!3m2!1sid!2sid!4v1785180973260!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
